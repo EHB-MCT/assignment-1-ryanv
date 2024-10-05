@@ -13,3 +13,7 @@ from game import run_game
 # Initialise Pygame
 pygame.init()
 
+# Create game window
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption("Platformer game")
+clock = pygame.time.Clock()
