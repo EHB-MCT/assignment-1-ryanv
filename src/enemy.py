@@ -3,6 +3,17 @@ import random
 
 class Enemy:
     def __init__(self, screen_width, screen_height, player_size):
+        """
+        Initialize an enemy character.
+
+        Loads the enemy image, sets its size, and positions it randomly
+        within the screen. Also defines the enemy's movement speed.
+
+        Args:
+            screen_width (int): Width of game screen.
+            screen_height (int): Height of game screen.
+            player_size (tuple): Size of the player (to scale enemy to same size).
+        """
         # Load the enemy image and resize it
         self.image = pygame.image.load('assets/images/dynamics/enemy.png')
         self.image = pygame.transform.scale(self.image, player_size)  # Same size as player
@@ -21,8 +32,10 @@ class Enemy:
         self.screen_width = screen_width
         self.screen_height = screen_height
 
-    # Update the position of the enemy
     def update(self):
+        """
+        Update the enemy's position.
+        """
         # Move the enemy
         self.rect.x += self.speed_x
         self.rect.y += self.speed_y
@@ -33,6 +46,11 @@ class Enemy:
         if self.rect.top <= 0 or self.rect.bottom >= self.screen_height:
             self.speed_y *= -1  # Reverse vertical direction
 
-    # Draw the enemy on the screen
     def draw(self, screen):
+        """
+        Draw enemy on screen.
+
+        Args:
+            screen (Surface): The surface to draw the enemy on.
+        """
         screen.blit(self.image, self.rect)
