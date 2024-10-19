@@ -1,7 +1,14 @@
 import pygame
 
+
 class Player:
     def __init__(self):
+        """
+        Initialise the player.
+
+        Loads and resizes the player image, sets the initial position,
+        speed, and movement attributes.
+        """
         # Load the player image
         self.image = pygame.image.load('assets/images/dynamics/player.png')
 
@@ -23,8 +30,15 @@ class Player:
         self.moving_up = False
         self.moving_down = False
 
-    # Movement controls event listeners
     def handle_event(self, event):
+        """
+        Handle events for player movement.
+
+        Updates movement attributes based on keyboard input.
+
+        Args:
+            event (Event): The pygame event to handle.
+        """
         # Set movement attributes to True when key pressed down
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT or event.key == ord('a'):
@@ -47,8 +61,10 @@ class Player:
             if event.key == pygame.K_DOWN or event.key == ord('s'):
                 self.moving_down = False
 
-    # Update player position
     def update(self):
+        """
+        Update player's position.
+        """
         if self.moving_left:
             self.rect.x -= self.speed
         if self.moving_right:
@@ -58,6 +74,11 @@ class Player:
         if self.moving_down:
             self.rect.y += self.speed
 
-    # Draw player on screen
     def draw(self, screen):
+        """
+        Draw the player on screen.
+
+        Args:
+            screen (Surface): The surface to draw the player on.
+        """
         screen.blit(self.image, self.rect)
