@@ -32,10 +32,10 @@ class Game:
     def draw(self):
         # Fill screen with a black background
         self.screen.fill((0, 0, 0))
-        self.player.draw(self.screen)        for enemy in self.enemies:
 
         # Draw player
         self.player.draw(self.screen)
 
         # Draw enemies
+        for enemy in self.enemies:
             enemy.draw(self.screen)
