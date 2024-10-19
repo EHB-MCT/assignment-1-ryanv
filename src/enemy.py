@@ -12,7 +12,7 @@ class Enemy:
 
         # Random initial position
         self.rect.x = random.randint(0, screen_width - self.rect.width)
-        self.rect.y = random.randint(0, screen_height - self.rect.height)
+        self.rect.y = random.randint((screen_height // 2), screen_height - self.rect.height)
 
         # Movement speed (constant speed)
         self.speed_x = random.choice([-3, 3])  # Random speed in x direction
