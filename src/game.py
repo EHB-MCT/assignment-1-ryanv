@@ -5,6 +5,12 @@ import pygame
 
 class Game:
     def __init__(self, screen):
+        """
+        Initialise the game with player and enemies.
+
+        Args:
+            screen (Surface): The Pygame surface to draw the game on.
+        """
         self.screen = screen
         self.player = Player()
 
@@ -16,6 +22,12 @@ class Game:
         self.game_over = False
 
     def create_enemies(self, number_of_enemies):
+        """
+        Create enemies and add them to the game.
+
+        Args:
+            number_of_enemies (int): The amount of enemies.
+        """
         # Get player size from player image rect
         player_size = (self.player.rect.width, self.player.rect.height)
 
@@ -25,6 +37,11 @@ class Game:
             self.enemies.append(enemy)
 
     def check_collision(self):
+        """
+        Check for collisions between the player and enemies.
+
+        Sets the game_over attribute to True if a collision is detected.
+        """
         # Iterate through all enemies and check if they hit the player
         for enemy in self.enemies:
             if self.player.rect.colliderect(enemy.rect):
@@ -33,6 +50,11 @@ class Game:
                 return  # Stop when collision is detected
 
     def update(self):
+        """
+        Update the game state, player position and enemy position.
+
+        Checks for collisions and updates the game status.
+        """
         if not self.game_over:
             # Update player position
             self.player.update()
@@ -45,6 +67,12 @@ class Game:
             self.check_collision()
 
     def draw(self):
+        """
+        Draw game elements on screen.
+
+        Fills background, draws the player and enemies,
+        displays "Game Over".
+        """
         # Fill screen with a black background
         self.screen.fill((0, 0, 0))
 
