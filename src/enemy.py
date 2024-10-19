@@ -6,6 +6,10 @@ class Enemy:
         # Load the enemy image and resize it
         self.image = pygame.image.load('assets/images/dynamics/enemy.png')
         self.image = pygame.transform.scale(self.image, player_size)  # Same size as player
+
+        # Get the rect (for positioning and collisions)
+        self.rect = self.image.get_rect()
+
         # Random initial position
         self.rect.x = random.randint(0, screen_width - self.rect.width)
         self.rect.y = random.randint(0, screen_height - self.rect.height)
