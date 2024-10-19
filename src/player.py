@@ -2,7 +2,16 @@ import pygame
 
 class Player:
     def __init__(self):
+        # Load the player image
         self.image = pygame.image.load('assets/images/dynamics/player.png')
+
+        # Resize the player image (reduce size)
+        original_width, original_height = self.image.get_size()
+        new_width = int(original_width * 0.2)  # 20% of the original width
+        new_height = int(original_height * 0.2)  # 20% of the original height
+        self.image = pygame.transform.scale(self.image, (new_width, new_height))
+
+        # Set player rectangle (used for positioning and collisions)
         self.rect = self.image.get_rect()
         self.rect.x = 100
         self.rect.y = 100
@@ -38,7 +47,7 @@ class Player:
             if event.key == pygame.K_DOWN or event.key == ord('s'):
                 self.moving_down = False
 
-    # Update player position if any movement attribute is set to True
+    # Update player position
     def update(self):
         if self.moving_left:
             self.rect.x -= self.speed
