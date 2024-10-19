@@ -33,12 +33,16 @@ class Game:
                 return  # Stop when collision is detected
 
     def update(self):
-        # Update player position
-        self.player.update()
+        if not self.game_over:
+            # Update player position
+            self.player.update()
 
-        # Update enemy positions
-        for enemy in self.enemies:
-            enemy.update()
+            # Update each enemy position
+            for enemy in self.enemies:
+                enemy.update()
+
+            # Check for collisions
+            self.check_collision()
 
     def draw(self):
         # Fill screen with a black background
