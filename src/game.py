@@ -1,6 +1,6 @@
 from player import Player
 from enemy import Enemy
-import random
+import pygame
 
 
 class Game:
@@ -11,6 +11,9 @@ class Game:
         # Create a list of enemies
         self.enemies = []
         self.create_enemies(3) #number of enemies
+
+        # Flag for game over or collision
+        self.game_over = False
 
     def create_enemies(self, number_of_enemies):
         # Get player size from player image rect
