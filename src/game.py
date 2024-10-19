@@ -24,6 +24,14 @@ class Game:
             enemy = Enemy(self.screen.get_width(), self.screen.get_height(), player_size)
             self.enemies.append(enemy)
 
+    def check_collision(self):
+        # Iterate through all enemies and check if they hit the player
+        for enemy in self.enemies:
+            if self.player.rect.colliderect(enemy.rect):
+                print("Collision detected!")
+                self.game_over = True
+                return  # Stop when collision is detected
+
     def update(self):
         # Update player position
         self.player.update()
