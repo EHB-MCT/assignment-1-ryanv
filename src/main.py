@@ -30,6 +30,8 @@ def main():
             # Stop game loop when quitting pygame
             if event.type == pygame.QUIT:
                 running = False
+            # Handle player movement events
+            game.player.handle_event(event)
 
         # Update the game state
         game.update()

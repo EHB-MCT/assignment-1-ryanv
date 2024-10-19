@@ -6,6 +6,7 @@ This project currently contains only dummy code that shows the conventions used 
 ## Up & running 
 - Download Python from [Python website](https://www.python.org/downloads/)
 - Install pygame: ```pip install pygame```
+
 ## Sources 
 - [Pygame Installation Guide](https://www.pygame.org/wiki/GettingStarted) used to install Pygame
 - [Pygame newbie guide](https://www.pygame.org/docs/tut/newbieguide.html)
