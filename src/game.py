@@ -54,3 +54,9 @@ class Game:
         # Draw enemies
         for enemy in self.enemies:
             enemy.draw(self.screen)
+
+        # Display "Game Over" message if game is over
+        if self.game_over:
+            font = pygame.font.SysFont(None, 55)
+            text = font.render('Game Over', True, (255, 0, 0))
+            self.screen.blit(text, (self.screen.get_width() // 2 - 100, self.screen.get_height() // 2 - 30))
