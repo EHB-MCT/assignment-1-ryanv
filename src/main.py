@@ -16,6 +16,12 @@ clock = pygame.time.Clock()
 
 # Game loop
 def main():
+    """
+    Run the Platformer game.
+
+    Initializes the game window, handles events, updates game
+    state, and renders the graphics until the game is exited.
+    """
     # Instantiate the Game class
     game = Game(screen)
 
