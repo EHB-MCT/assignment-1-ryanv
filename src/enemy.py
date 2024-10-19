@@ -23,6 +23,12 @@ class Enemy:
         self.rect.x += self.speed_x
         self.rect.y += self.speed_y
 
+        # Bounce off the screen edges
+        if self.rect.left <= 0 or self.rect.right >= self.screen_width:
+            self.speed_x *= -1  # Reverse horizontal direction
+        if self.rect.top <= 0 or self.rect.bottom >= self.screen_height:
+            self.speed_y *= -1  # Reverse vertical direction
+
     # Draw the enemy on the screen
     def draw(self, screen):
         screen.blit(self.image, self.rect)
