@@ -1,7 +1,9 @@
 # Python pygame platformer
-A platformer game created with Python's Pygame library. 
+A simple collision detection game created with Python's Pygame library. There's enemies moving around the screen and 
+the player needs to avoid hitting the enemies by moving with the arrow keys or with WASD.
 
-This project currently contains only dummy code that shows the conventions used when coding with Python (and more specifically, Pygame).
+This project currently contains only dummy code that shows the conventions used when coding with Python (and more 
+specifically, Pygame).
 
 ## Up & running 
 - Download Python from [Python website](https://www.python.org/downloads/)
