@@ -10,9 +10,9 @@ This project currently contains only dummy code that shows the conventions used 
 ## Sources 
 - [Pygame Installation Guide](https://www.pygame.org/wiki/GettingStarted) used to install Pygame
 - [Pygame newbie guide](https://www.pygame.org/docs/tut/newbieguide.html)
-- [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/) correct use of style conventions in project
-- [Pygame Quick start](https://www.pygame.org/docs/) used to create main game loop in src > main.py
-- [Moving player with pygame](https://opensource.com/article/17/12/game-python-moving-player) used to move player in src > player.py
-- [Bouncing enemies off wall](https://wall-ball.readthedocs.io/en/latest/steps/step01.html) used to reverse enemy direction when they hit the wall
+- [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/) correct use of style conventions in project in src > *
+- [Pygame Quick start](https://www.pygame.org/docs/) used to create main game loop in src > main.py 17-53
+- [Moving player with pygame](https://opensource.com/article/17/12/game-python-moving-player) used to move player in src > player.py 33-75
+- [Bouncing enemies off wall](https://wall-ball.readthedocs.io/en/latest/steps/step01.html) used to reverse enemy direction when they hit the wall in src > enemy.py 43-47
 - [Choose a license - MIT license](https://choosealicense.com/licenses/mit/) used to create MIT license
-- [Python programming: Docstrings](https://www.programiz.com/python-programming/docstrings) used to document functions and classes with docstrings
+- [Python programming: Docstrings](https://www.programiz.com/python-programming/docstrings) used to document functions and classes with docstrings in src > *
