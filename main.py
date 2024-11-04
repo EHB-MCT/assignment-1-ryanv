@@ -3,8 +3,8 @@
 # Imports
 import pygame
 import sys
-from settings import SCREEN_WIDTH, SCREEN_HEIGHT, FPS
-from game import Game  # Import the Game class
+from src.settings import SCREEN_WIDTH, SCREEN_HEIGHT, FPS
+from src.game import Game
 
 # Initialise Pygame
 pygame.init()

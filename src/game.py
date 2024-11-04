@@ -1,5 +1,5 @@
-from player import Player
-from enemy import Enemy
+from src.player import Player
+from src.enemy import Enemy
 import pygame
 
 
