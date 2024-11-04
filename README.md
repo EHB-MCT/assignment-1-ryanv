@@ -36,10 +36,9 @@ assignment-1-ryanv/
 │   ├── assets.py              # Module for handling assets
 │   ├── enemy.py               # Module for enemy logic
 │   ├── game.py                # Game logic
-│   ├── main.py                # Entry point of the application
 │   ├── player.py              # Module for player logic
 │   └── settings.py            # Game settings
-│
+├── main.py                    # Entry point for the application
 ├── .gitignore                 # Specifies files to be ignored by Git
 ├── LICENSE                    # License information
 ├── README.md                  # Project documentation
