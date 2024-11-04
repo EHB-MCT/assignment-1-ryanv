@@ -58,3 +58,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Choose a license - MIT license](https://choosealicense.com/licenses/mit/) used to create MIT license
 - [Python programming: Docstrings](https://www.programiz.com/python-programming/docstrings) used to document functions and classes with docstrings in src > *
 - [ChatGPT](https://chatgpt.com/share/671626a0-2670-8002-838d-dc274be10d10) used to generate Project structure for README
+...
